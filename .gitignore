@@ -1,0 +1,8 @@
+.idea
+source/node_modules/
+source/package-lock.json
+dist
+.terraform/
+terraform.tfstate*
+.*swp
+.npmrc
