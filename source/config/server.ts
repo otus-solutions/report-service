@@ -1,22 +1,21 @@
-import app from "./app";
+import App from "./app";
 const listEndpoints = require('express-list-endpoints');
 
+class Server{
 
-listen();
+  constructor() {
+    this.listen()
+  }
 
-function listen() {
-  app.listen(app.get("API_PORT"), () => {
-    console.log(
-      "  App is running at http://localhost:%d in %s mode",
-      app.get("API_PORT"),
-      app.get("env")
-    );
-    console.log("  Press CTRL-C to stop\n");
-  });
-  endpointsList();
+  listen(){
+    App.listen(App.get("API_PORT"), () => {
+    });
+    this.endpointsList();
+  }
+
+  endpointsList(){
+    let endpoints = listEndpoints(App);
+    console.table(endpoints)
+  }
 }
-
-function endpointsList() {
-  let endpoints = listEndpoints(app);
-  console.table(endpoints)
-}
+export default new Server();

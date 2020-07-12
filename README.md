@@ -1,4 +1,5 @@
 # reports-service
+This project aims to carry mount a report template.
 
 # Build Code
 `npm run production --prefix source/`
