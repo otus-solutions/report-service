@@ -1,6 +1,6 @@
 {
-  "name": "outcomes-service",
-  "version": "1.2.0",
+  "name": "reports-service",
+  "version": "1.0.0",
   "description": "Node api for participant outcomes",
   "main": "dist/app.js ",
   "scripts": {
