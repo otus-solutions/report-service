@@ -1,6 +1,5 @@
 import express from "express";
 import bodyParser from "body-parser";
-// import RouterInitializer from "../../app/routes/initializer";
 import routes from "../app/routes/routes";
 
 class App{

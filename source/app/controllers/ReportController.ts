@@ -7,9 +7,10 @@ class ReportController {
     try{
       const report = new ReportFactory(req.body)
       const template = TemplateService.templateManager(report)
-      if (template.error)
-        return res.status(500).send({error: "template send error"})
-      res.status(200).json({data: TemplateService.templateManager(report)})
+      if (!template.error)
+        return res.status(200).json({data: TemplateService.templateManager(report)})
+
+      return res.status(500).send({error: "template sended with datasources incomplete"})
     } catch (e) {
       res.status(e.status).send({error: e.body});
     }
